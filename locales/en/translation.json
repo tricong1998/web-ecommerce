@@ -1,0 +1,13 @@
+{
+  "errors": {
+    "title": "Page not found",
+    "go-to-home": "Go to homepage",
+    "how-to-contact-us": "How to contact us",
+    "checkout-faq": "Check out our FAQ's"
+  },
+  "error": {
+    "oops": "oops.",
+    "something-went-wrong": "Something went wrong!",
+    "try-one": "You can try one of these links to get back on track."
+  }
+}

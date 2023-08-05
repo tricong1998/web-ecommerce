@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      colors: {
+    colors: {
       ...colors,
       cornflower: {
         light: '#f3f6fa',
@@ -111,8 +109,26 @@ module.exports = {
       btn: {
         focus: '#B8C5D2',
       },
-    }
+    },
+    extend: {
+      boxShadow: {
+        ...defaultTheme.boxShadow,
+        header: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        xlarge:
+          '0px 0px 12px 2px rgba(0, 0, 0, 0.08), 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 25px 50px -12px rgba(0, 0, 0, 0.15)',
+        buttonAddToCart: '0px -1px 3px rgba(0, 0, 0, 0.1)',
+      },
+      screens: {
+        ultra: '1440px',
+        wide: '1180px',
+        large: '880px',
+        medium: '720px',
+        md_820: '820px',
+        md_910: '910px',
+        small: '680px',
+      },
     },
   },
   plugins: [],
-}
+  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+};
